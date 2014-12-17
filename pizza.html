@@ -1,8 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Udacity FED nano degree - project 4">
+  <meta name="author" content="Mike Ackerman">
+  <title>Mike Ackerman: Portfolio</title>
+
+  <link rel="stylesheet" href="dist/style-pizza.css">
+  <link rel="stylesheet" href="dist/bootstrap-grid.css">
+
+  <script async src="http://www.google-analytics.com/analytics.js"></script>
+  <script async src="dist/ga_pageview.js"></script>
+  <script async src="dist/perfmatters.js"></script>
 </head>
 
 <body>
@@ -36,12 +46,12 @@
     </div>
     <div id="callToAction" class="row">
       <div class="col-md-4">
-        <img src="images/pizzeria.jpg" class="img-responsive"> <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
+        <img src="img/pizzeria-lg.png" class="img-responsive"> <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
       </div>
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-12">
-            <h2>We Have Hundreds of Pizza Recipes!</h2>            
+            <h2>We Have Hundreds of Pizza Recipes!</h2>
             <p>At Cam's Pizzeria, we know you want options. Pepperoni? Boring. Cheese? No way! Sausage? C'mon, let's get creative.</p>
 
             <p>We have every pizza ingredient imaginable in our kitchen because we know you take choice seriously. Take a look through our menu of hundreds of pizza options and we know that you'll find something you love.</p>
@@ -76,7 +86,7 @@
     </div>
     <div id="locations" class="row">
       <div class="col-md-12">
-        <h2 style="text-align: center">Locations!</h2>
+        <h2 class="centered">Locations!</h2>
         <div class="row">
           <div class="col-md-6">
             <h3>Pizza Road</h3>
@@ -91,7 +101,7 @@
     </div>
     <div id="pizzaGenerator" class="row">
       <div class="col-md-12">
-        <h2 style="text-align: center">Our Pizzas!</h2>
+        <h2 class="centered">Our Pizzas!</h2>
         <div class="row">
           <div class="col-md-12">
             <em>What size pizza would you like? Use the slider below to change pizza sizes.</em>
@@ -102,9 +112,9 @@
           </div>
         </div>
         <div id="randomPizzas" class="row">
-          <div id="pizza0" class="randomPizzaContainer" style="width:33.33%;">
+          <div id="pizza0" class="randomPizzaContainer">
             <div class="col-md-6">
-              <img src="images/pizza.png" class="img-responsive">
+              <img src="img/pizza.png" class="img-responsive">
             </div>
             <div class="col-md-6">
               <h4>The Udacity Special</h4>
@@ -119,9 +129,9 @@
               </ul>
             </div>
           </div>
-          <div id="pizza1" class="randomPizzaContainer" style="width:33.33%;">
+          <div id="pizza1" class="randomPizzaContainer">
             <div class="col-md-6">
-              <img src="images/pizza.png" class="img-responsive">
+              <img src="img/pizza.png" class="img-responsive">
             </div>
             <div class="col-md-6">
               <h4>The Cameron Special</h4>
@@ -137,7 +147,10 @@
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
-  <script type="text/javascript" src="js/main.js"></script>
+  <footer>
+    <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+  </footer>
+  <script type="text/javascript" src="dist/main.js"></script>
 </body>
 
 </html>
