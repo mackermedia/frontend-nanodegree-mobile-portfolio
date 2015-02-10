@@ -450,10 +450,14 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    // since all pizzas are the same size, we can do the calculation outside of the loop
+    // and then update all of their sizes in the loop
+    var containers = document.querySelectorAll(".randomPizzaContainer");
+    var dx = determineDx(containers[0], size);
+    var newwidth = (containers[0].offsetWidth + dx) + 'px';
+
+    for (var i = 0; i < containers.length; i++) {
+      containers[i].style.width = newwidth;
     }
   }
 
@@ -502,9 +506,13 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
+  // get all the movers
   var pizzaMoverItems = document.querySelectorAll('.mover');
+  // determine phase based on scroll position.
+  // we can do this outside of the loop to avoid unneccessary calculations!
   var phase = Math.sin(document.body.scrollTop / 1250);
 
+  // loop over the mover items and update their left position based on the phase calculation
   for (var i = 0; i < pizzaMoverItems.length; i++) {
     pizzaMoverItems[i].style.left = pizzaMoverItems[i].basicLeft + 100 * (phase + (i % 5)) + 'px';
   }
