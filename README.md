@@ -52,7 +52,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 Below the line! Woo!
 
-### Minifying assets
+### How to minify assets
 
 1. Start by installing the necessary node modules with:
 
@@ -65,3 +65,18 @@ npm install
 ```
 gulp
 ```
+
+### To view in the browser:
+
+Open `index.html` in your browser, by right-clicking. Or enter in the url bar:
+
+`file:///PATH/TO/YOUR/DIRECTORY/index.html`
+
+### Optimizations used for framerate:
+
+I moved some of the calculations outside of the loops and on the size changing scroll bar, moved the size calculation to be done once instead of once for each item in the loop.
+
+### Minified & Un-minified versions of files:
+
+Minified versions of html and JS files can be found in `./dist/` directory.
+Minified versions of images can be found alongside the originals in the `./img/` directory with a filename of `...-min.png` appended.
